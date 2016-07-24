@@ -6,7 +6,7 @@ library(RSQLite)
 ## NOTE: This code assumes that you have already downloaded and unzipped
 ## the household power consumption data, and placed in the same directory
 ## as the script. Please feel free to update the value of the "value" parameter 
-## in the dbWriteTable function call (line 20) accordingly to the appropriate 
+## in the dbWriteTable function call (line 18) accordingly to the appropriate 
 ## file directory of the data
 
 ## Read data
@@ -44,6 +44,8 @@ with(consumption.data, {
          type = "l", xlab = "", ylab = "Global Active Power")
     
     ## Make plot (1, 2)
+    ## Set x label to blank (instead of "datetime" in the instruction) to
+    ## maintain consistency across the plot
     plot(New_time, Voltage, type = "l", xlab = "")
     
     ## Make plot (2, 1)
@@ -58,6 +60,8 @@ with(consumption.data, {
            col = c("black", "red", "blue"))
     
     ## Make plot (2, 2)
+    ## Set x label to blank (instead of "datetime" in the instruction) to
+    ## maintain consistency across the plot
     plot(New_time, Global_reactive_power, 
          type = "l", xlab = "", ylab = "Global Reactive Power")
 })

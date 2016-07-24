@@ -6,7 +6,7 @@ library(RSQLite)
 ## NOTE: This code assumes that you have already downloaded and unzipped
 ## the household power consumption data, and placed in the same directory
 ## as the script. Please feel free to update the value of the "value" parameter 
-## in the dbWriteTable function call (line 20) accordingly to the appropriate 
+## in the dbWriteTable function call (line 18) accordingly to the appropriate 
 ## file directory of the data
 
 ## Read data
