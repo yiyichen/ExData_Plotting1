@@ -9,7 +9,7 @@ library(RSQLite)
 ## in the dbWriteTable function call (line 18) accordingly to the appropriate 
 ## file directory of the data
 
-## Read data
+## ========== Read data ========== 
 ## Create a temporary database on disk and load data into the database
 con <- dbConnect(SQLite(), dbname = "")
 
@@ -27,10 +27,11 @@ consumption.data$New_time <-
     strptime(paste(consumption.data[,1], consumption.data[,2]), 
              format = "%d/%m/%Y %H:%M:%S")
 
-## Close database connection
 dbDisconnect(con)
 
-## Make plot 2
+
+
+## ========== Make plot 2 ========== 
 print("Making plot 2")
 
 ## Launch png device
